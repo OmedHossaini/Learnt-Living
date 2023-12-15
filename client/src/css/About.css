@@ -1,0 +1,18 @@
+.about-section {
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  .mission-values {
+    margin-bottom: 20px;
+  }
+  
+  .team-member {
+    margin-bottom: 20px;
+  }
+  
+  .team-member-image {
+    border-radius: 50%;
+  }
+  
