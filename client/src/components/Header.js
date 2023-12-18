@@ -1,8 +1,25 @@
-import React from 'react';
+// Header.js
+
+import React, { useEffect, useState } from 'react';
 import '../css/Header.css';
+
 function Header() {
+  const [isSticky, setSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setSticky(window.scrollY > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <header>
+    <header className={`${isSticky ? 'sticky' : ''}`}>
       <div className="logo">Learnt Living</div>
       <nav>
         <ul>
@@ -18,3 +35,4 @@ function Header() {
 }
 
 export default Header;
+

@@ -31,3 +31,20 @@ header {
   nav ul li a:hover {
     color: #ffeb3b; 
 }
+/* Header.css */
+
+header {
+  background-color: #333;
+  padding: 10px 0;
+  color: #fff;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+header.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #555;
+}
